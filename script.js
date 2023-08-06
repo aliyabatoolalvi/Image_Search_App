@@ -54,3 +54,15 @@ showMore.addEventListener("click", () =>{
     //calling above function  named as search image
     searchImages();
 })
+
+const openCardButton = document.getElementById("openCardButton");
+
+openCardButton.addEventListener("click", () => {
+    const emailAddress = "alvialiyabatool@gmail.com";
+    const subject = "Hello";  // You can set a default subject if needed
+    const body = "Hi, I'd like to get in touch with you.";  // You can set a default body if needed
+    
+    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
+});
